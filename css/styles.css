@@ -1,0 +1,8 @@
+.jumbotron {
+  margin-top: 10%;
+}
+
+.jumbotron a {
+  display: block;
+  text-decoration: none;
+}
