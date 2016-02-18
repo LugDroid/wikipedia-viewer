@@ -1,8 +1,51 @@
 .jumbotron {
   margin-top: 10%;
 }
-
 .jumbotron a {
   display: block;
   text-decoration: none;
+}
+.result {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}
+
+/*.form-control::-moz-placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+.form-control::-webkit-input-placeholder {
+  text-align: right;
+  direction: rtl;
+}*/
+
+::-webkit-input-placeholder::after {
+  font-family: fontAwesome;
+  content: '\f002  ';
+  color: #69f;
+  margin-left: 55%;
+}
+::-moz-placeholder::after {
+  font-family: fontAwesome;
+  content: '\f002  ';
+  color: #69f;
+  text-align: right;
+}
+
+/* firefox 19+ */
+:-ms-input-placeholder::after {
+  font-family: fontAwesome;
+  content: '\f002  ';
+  color: #69f;
+  text-align: right;
+}
+
+/* ie */
+input:-moz-placeholder::after {
+  font-family: fontAwesome;
+  content: '\f002  ';
+  color: #69f;
+  text-align: right;
 }
