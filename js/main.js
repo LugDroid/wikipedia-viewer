@@ -22,14 +22,14 @@ $(document).ready(function() {
           html += "' target='_blank'><h4>";
           html += data.query.search[i].title + "</h4>";
           html += "<p>" + data.query.search[i].snippet + "</p>";
-          html += "</a></div>";
+          html += "</a><div class='line-separator'></div></div>";
           $("#results-wrapper").append(html);
-          // $("#results-wrapper").append("<p><a href='https://en.wikipedia.org/wiki/" + data.query.search[i].title + "' target='_blank'>" + data.query.search[i].title + "</a></p>")
         }
       });
     }
   });
 
+  // delete search box contents on 'esc' key pressing
   $(document).keypress(function(e) {
     if (e.which == 27) {
       console.log("esc");

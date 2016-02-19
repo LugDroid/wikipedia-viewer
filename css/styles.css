@@ -1,15 +1,17 @@
 .jumbotron {
   margin-top: 10%;
+  background: #fff;
+  padding-bottom: 10px;
 }
 .jumbotron a {
   display: block;
   text-decoration: none;
 }
-.result {
+/*.result {
   border-style: solid;
   border-width: 1px;
   padding: 10px;
-}
+}*/
 
 /*.form-control::-moz-placeholder {
   text-align: right;
@@ -25,13 +27,13 @@
   font-family: fontAwesome;
   content: '\f002  ';
   color: #69f;
-  margin-left: 55%;
+  margin-left: 90%;
 }
 ::-moz-placeholder::after {
   font-family: fontAwesome;
   content: '\f002  ';
   color: #69f;
-  text-align: right;
+  margin-left: 90%;
 }
 
 /* firefox 19+ */
@@ -39,7 +41,7 @@
   font-family: fontAwesome;
   content: '\f002  ';
   color: #69f;
-  text-align: right;
+  margin-left: 90%;
 }
 
 /* ie */
@@ -47,5 +49,37 @@ input:-moz-placeholder::after {
   font-family: fontAwesome;
   content: '\f002  ';
   color: #69f;
-  text-align: right;
+  margin-left: 90%;
+}
+
+.random-btn {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #699bfc;
+}
+
+.btn-primary:hover {
+  background-color: #4380F9;
+}
+
+.result a h4 {
+  color: #555;
+}
+
+.result a  p {
+  color: #777;
+}
+
+.result a:hover {
+  text-decoration: none;
+}
+
+.line-separator {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  background: #699bfc;
+  height: 2px;
 }
