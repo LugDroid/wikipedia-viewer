@@ -2,11 +2,10 @@ $(document).ready(function() {
   // place focus into form
   $("#search-box").focus();
 
-  // var searchQuery = "https://en.wikipedia.org//w/api.php?action=query&format=json&prop=info%7Clinks&generator=search&gsrsearch=";
-  var searchQuery ="https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=";
+  var searchQuery = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=20&callback=?&search=";
 
   // wait for enter key pressing
-  $(document).keypress(function(e) {
+  $("#search-box").keypress(function(e) {
     if (e.which == 13) {
       // remove previous search results
       $(".result").remove();
@@ -15,13 +14,13 @@ $(document).ready(function() {
       var searchTerm = $("#search-box").val();
 
       // wikipedia search
-      $.get(searchQuery + searchTerm, function(data) {
-        for (var i = 0; i < data.query.search.length; i++) {
+      $.getJSON(searchQuery + searchTerm, function(data) {
+        for (var i = 0; i < data[1].length; i++) {
           var html = "<div class='result'><a href='https://en.wikipedia.org/wiki/";
-          html += data.query.search[i].title;
+          html += data[1][i]; // add title
           html += "' target='_blank'><h4>";
-          html += data.query.search[i].title + "</h4>";
-          html += "<p>" + data.query.search[i].snippet + "</p>";
+          html += data[1][i] + "</h4>";
+          html += "<p>" + data[2][i] + "</p>";
           html += "</a><div class='line-separator'></div></div>";
           $("#results-wrapper").append(html);
         }
