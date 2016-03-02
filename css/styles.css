@@ -52,12 +52,11 @@ input:-moz-placeholder::after {
   margin-left: 90%;
 }
 
-.random-btn {
-  margin-top: 20px;
-}
-
 .btn-primary {
   background-color: #699bfc;
+  margin-top: 20px;
+  display: inline-block;
+  width: 125px;
 }
 
 .btn-primary:hover {
